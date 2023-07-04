@@ -1,5 +1,4 @@
-const { fifaData } = require('./fifa.js')
-
+const { fifaData } = require("./fifa.js");
 
 /* Görev 1: 
 	Verilen datayı parçalayarak aşağıdaki verileri (console.log-ing) elde ederek pratik yapın. 
@@ -7,15 +6,30 @@ const { fifaData } = require('./fifa.js')
 	💡 İPUCU: Öncelikle datayı filtrelemek isteyebilirsiniz */
 
 //(a) 2014 Dünya kupası Finali Evsahibi takım ismi (dizide "Home Team Name" anahtarı)
-
+const yil2014HomeTeam = fifaData.filter(
+  (result) => result.Year === 2014 && result.Stage === "Final"
+)[0];
+console.log(yil2014HomeTeam["Home Team Name"]);
 //(b) 2014 Dünya kupası Finali Deplasman takım ismi  (dizide "Away Team Name" anahtarı)
-
+const yil2014AwayTeam = fifaData.filter(
+  (result) => result.Year === 2014 && result.Stage === "Final"
+)[0];
+console.log(yil2014AwayTeam["Away Team Name"]);
 //(c) 2014 Dünya kupası finali Ev sahibi takım golleri (dizide "Home Team Goals" anahtarı)
-
+const yil2014HomeTeamGoals = fifaData.filter(
+  (result) => result.Year === 2014 && result.Stage === "Final"
+)[0];
+console.log(yil2014HomeTeamGoals["Home Team Goals"]);
 //(d)2014 Dünya kupası finali Deplasman takım golleri  (dizide "Away Team Goals" anahtarı)
-
+const yil2014AwayTeamGoals = fifaData.filter(
+  (result) => result.Year === 2014 && result.Stage === "Final"
+)[0];
+console.log(yil2014AwayTeamGoals["Away Team Goals"]);
 //(e) 2014 Dünya kupası finali kazananı*/
-
+const yil2014Kazanan = fifaData.filter(
+  (result) => result.Year === 2014 && result.Stage == "Final"
+)[0];
+console.log(yil2014Kazanan["Win conditions"]);
 
 /*  Görev 2: 
 	Finaller adlı fonksiyonu kullanarak aşağıdakileri uygulayın:
@@ -26,11 +40,8 @@ const { fifaData } = require('./fifa.js')
 */
 
 function Finaller(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
+  /* kodlar buraya */
 }
-
-
 
 /*  Görev 3: 
 	Bir higher-order fonksiyonu olan Yillar isimli fonksiyona aşağıdakileri uygulayın: 
@@ -40,10 +51,8 @@ function Finaller(/* kodlar buraya */) {
 	*/
 
 function Yillar(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
+  /* kodlar buraya */
 }
-
 
 /*  Görev 4: 
 	Bir higher-order fonksiyonunu olan Kazananlar isimli fonksiyona aşağıdakileri uygulayın:  
@@ -51,15 +60,11 @@ function Yillar(/* kodlar buraya */) {
 	2. Görev 2'de yazdığınız Finaller fonksiyonunu, geriçağırım(callback) olarak fonksiyonun ikinci parametresi olarak alacak
 	3. Her final maçının kazananını (evsahibi ya da deplasman) belirleyecek
 	💡 İPUCU: Beraberlikler(ties) için şimdilik endişelenmeyin (Detaylı bilgi için README dosyasına bakabilirsiniz.)
-	4. Tüm kazanan ülkelerin isimlerini içeren `kazananlar` adında bir dizi(array) döndürecek(return)  */ 
+	4. Tüm kazanan ülkelerin isimlerini içeren `kazananlar` adında bir dizi(array) döndürecek(return)  */
 
 function Kazananlar(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
-	
+  /* kodlar buraya */
 }
-
-
 
 /*  Görev 5: 
 	Bir higher-order fonksiyonu olan YillaraGoreKazananlar isimli fonksiyona aşağıdakileri uygulayın:
@@ -73,11 +78,8 @@ function Kazananlar(/* kodlar buraya */) {
 */
 
 function YillaraGoreKazananlar(/* kodlar buraya */) {
-	
-/* kodlar buraya */
-
+  /* kodlar buraya */
 }
-
 
 /*  Görev 6: 
 	Bir higher order fonksiyonu olan `OrtalamaGolSayisi` isimli fonksiyona aşağıdakileri uygulayın: 
@@ -94,12 +96,8 @@ function YillaraGoreKazananlar(/* kodlar buraya */) {
 */
 
 function OrtalamaGolSayisi(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
-	
+  /* kodlar buraya */
 }
-
-
 
 /// EKSTRA ÇALIŞMALAR ///
 
@@ -110,47 +108,36 @@ function OrtalamaGolSayisi(/* kodlar buraya */) {
 İpucu: `.reduce` Kullanın*/
 
 function UlkelerinKazanmaSayilari(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
-	
+  /* kodlar buraya */
 }
-
-
 
 /*  BONUS 2:  
 EnCokGolAtan() isminde bir fonksiyon yazın, `data` yı parametre olarak alsın ve Dünya kupası finallerinde en çok gol atan takımı döndürsün */
 
 function EnCokGolAtan(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
-	
+  /* kodlar buraya */
 }
-
 
 /*  BONUS 3: 
 EnKotuDefans() adında bir fonksiyon yazın, `data` yı parametre olarak alsın ve Dünya kupasında finallerinde en çok golü yiyen takımı döndürsün*/
 
 function EnKotuDefans(/* kodlar buraya */) {
-	
-    /* kodlar buraya */
-	
+  /* kodlar buraya */
 }
-
 
 /* Hala vaktiniz varsa, README dosyasında listelenen hedeflerden istediğinizi aşağıdaki boşluğa yazabilirsiniz. */
 
-
 /* Bu satırın aşağısındaki kodları lütfen değiştirmeyin */
-function sa(){
-    console.log('Kodlar çalışıyor');
-    return 'as';
+function sa() {
+  console.log("Kodlar çalışıyor");
+  return "as";
 }
 sa();
 module.exports = {
-    sa,
-    Finaller,
-    Yillar,
-    Kazananlar,
-    YillaraGoreKazananlar,
-    OrtalamaGolSayisi
-}
+  sa,
+  Finaller,
+  Yillar,
+  Kazananlar,
+  YillaraGoreKazananlar,
+  OrtalamaGolSayisi,
+};
