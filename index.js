@@ -39,9 +39,12 @@ console.log(yil2014Kazanan["Win conditions"]);
 	💡 İPUCU - verilen data içindeki nesnelerin(objects) "Stage" anahtarına bakmalısınız
 */
 
-function Finaller(/* kodlar buraya */) {
-  /* kodlar buraya */
+function Finaller() {
+  Kazanan = fifaData;
+  const final = Kazanan.filter((result) => result.Stage == "Final");
+  return final;
 }
+console.log(Finaller());
 
 /*  Görev 3: 
 	Bir higher-order fonksiyonu olan Yillar isimli fonksiyona aşağıdakileri uygulayın: 
